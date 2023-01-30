@@ -1,0 +1,32 @@
+h1 {
+    color: rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(140, 255, 255);
+    padding-left: 1%;
+    padding-bottom: 0.5em;
+    margin-left: 1em;
+    width: 60%;
+    max-width: 30em;
+}
+
+body {
+    background-color: rgb(17, 15, 69);
+}
+
+.pokemon {
+    display: inline-block;
+    margin: 1em 0.5em;
+    text-align: center;
+    border: 5px ridge rgba(60, 183, 235, 0.6);
+    background-color: rgba(4, 36, 110, 0.7);
+}
+
+.pokemon img {
+    display: block;
+    background-color: rgb(172, 162, 143);
+}
+
+.pokemon span {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(140, 255, 255);
+}

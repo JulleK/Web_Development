@@ -1,0 +1,31 @@
+body {
+    background-color: #142029;
+}
+
+div.quote {
+    border-left: 2px solid #298ac7;
+    border-radius: 10px;
+    padding: 15px;
+    width: 25%;
+    min-width: 12em;
+    margin: 25px 0 25px 80px;
+}
+
+p {
+    margin: 0;
+    text-align: center;
+    color: aliceblue;
+}
+
+div.textContent {
+    margin-left: 20px;
+    width: 50%;
+    min-width: 25em;
+    word-spacing: 2px;
+    line-height: 20px;
+    font-size: 17px;
+}
+
+div.textContent b {
+    color: #59c1e4;
+}

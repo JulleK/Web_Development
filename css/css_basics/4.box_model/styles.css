@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+
+h1 {
+  width: fit-content;
+  background-color: #caf0f8;
+  padding-top: 50px;
+  padding-right: 25px;
+  padding-left: 25px;
+  border-radius: 15%;
+  margin-bottom: 30px;
+}
+
+#one {
+  background-color: #90e0ef;
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  padding: 12.5px;
+}
+
+#two {
+  background-color: #00b4d8;
+  border-width: 5px;
+  border-color: #caf0f8;
+  border-style: dashed;
+  /* border-top: none; */
+  padding: 12.5px;
+}
+
+#three {
+  background-color: #0077b6;
+  border: 4px solid #03045e;
+  border-radius: 5%;
+  padding: 12.5px;
+}
+
+div {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}

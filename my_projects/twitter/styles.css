@@ -1,0 +1,49 @@
+body {
+  background-color: black;
+}
+
+main {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.profilePic {
+  border-radius: 50%;
+  width: 4em;
+  margin-left: 1.2em;
+  margin-top: 1.2em;
+  /* margin-bottom: 60px; */
+  float: left;
+}
+
+.post {
+  border: 1px solid rgb(71, 70, 70);
+  width: 40em;
+  font-size: 16px;
+}
+
+p {
+  color: rgb(233, 233, 233);
+}
+
+.username {
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  width: fit-content;
+  display: inline-block;
+}
+
+.accountName {
+  color: rgb(98, 98, 98);
+  display: inline;
+}
+
+.postContent {
+  display: block;
+  margin-right: 2em;
+  margin-left: 6.2em;
+  margin-top: 0;
+}

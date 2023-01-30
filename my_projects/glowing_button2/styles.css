@@ -1,0 +1,31 @@
+body {
+  background-color: #071007;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+button {
+  background-color: #4e9cea;
+  color: #ffffff;
+  padding: 1em 2em;
+  font-size: 1.5em;
+  border: 0.2em solid #2a00aa;
+  transition: all 0.6s;
+}
+
+button:hover {
+  background-color: #bc07bc;
+  transform: scale(1.15) translateY(-15px);
+  border-color: #3d0768;
+  box-shadow: 0 0.8em 1.7em -0.7em rgb(147, 3, 78);
+}
+
+button:active {
+  transform: rotate(20deg) scale(1.25) skew(10deg, 10deg);
+}
+
+button::selection {
+  color: #2a00aa;
+}
