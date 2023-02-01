@@ -1,16 +1,13 @@
-const button = document.querySelector('button');
-const h1 = document.querySelector('h1');
+const h1 = document.querySelector('h1')
+const button = document.querySelector('button')
+const colors = [];
 
-button.addEventListener('click', function () {
-    const newColor = makeRandColor();
-    document.body.style.backgroundColor = newColor;
-    h1.innerText = newColor;
+button.addEventListener('click', () => {
+    for (let i = 0; i <= 2; i++) {
+        colors[i] = Math.floor(Math.random() * 256)
+    }
+
+    const rgb = `rgb(${colors[0]}, ${colors[1]}, ${colors[2]})`;
+    document.body.style.backgroundColor = rgb;
+    h1.innerText = rgb;
 })
-
-const makeRandColor = () => {
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
-    return `rgb(${r}, ${g}, ${b})`;
-}
-
