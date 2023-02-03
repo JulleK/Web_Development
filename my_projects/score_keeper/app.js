@@ -14,50 +14,41 @@ const updateDisplay = (player, score) => {
     player.textContent = score
 }
 
-// const scoreDisplay = (playerDisplay, pScore, rivalDisplay) => {
-//     if (!isGameOver) {
-//         pScore++;
-//         if (pScore === winningScore) {
-//             isGameOver = true;
-//             playerDisplay.classList.add('winner')
-//             rivalDisplay.classList.add('loser')
-//         }
-//         updateDisplay(p1Display, p1Score)
-//         playerDisplay.textContent = pScore
-//     }
-// }
+const scoreDisplay = (playerDisplay, pScore, rivalDisplay) => {
+    if (pScore === winningScore) {
+        isGameOver = true;
+        playerDisplay.classList.add('has-text-success')
+        rivalDisplay.classList.add('has-text-danger')
+        p1Button.disabled = true;
+        p2Button.disabled = true;
+    }
+    playerDisplay.textContent = pScore
+}
 
 const resetGame = () => {
     p1Score = 0;
     p2Score = 0;
     isGameOver = false;
-    updateDisplay(p1Display, p1Score)
-    updateDisplay(p2Display, p2Score)
-    p1Display.classList.remove('winner', 'loser')
-    p2Display.classList.remove('winner', 'loser')
+    p1Display.textContent = p1Score
+    p2Display.textContent = p2Score
+    p1Display.classList.remove('has-text-success', 'has-text-danger')
+    p2Display.classList.remove('has-text-success', 'has-text-danger')
+
+    p1Button.disabled = false;
+    p2Button.disabled = false;
 }
 
 p1Button.addEventListener('click', () => {
     if (!isGameOver) {
         p1Score++;
-        if (p1Score === winningScore) {
-            isGameOver = true;
-            p1Display.classList.add('winner')
-            p2Display.classList.add('loser')
-        }
-        updateDisplay(p1Display, p1Score)
+        scoreDisplay(p1Display, p1Score, p2Display)
     }
 })
 
 p2Button.addEventListener('click', () => {
     if (!isGameOver) {
         p2Score++;
-        if (p2Score === winningScore) {
-            isGameOver = true;
-            p2Display.classList.add('winner')
-            p1Display.classList.add('loser')
-        }
-        updateDisplay(p2Display, p2Score)
+        scoreDisplay(p2Display, p2Score, p1Display)
     }
 })
 

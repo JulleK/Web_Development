@@ -4,33 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <title>Score Keeper</title>
-
-    <style>
-      .winner {
-        color: green;
-      }
-      .loser {
-        color: red;
-      }
-    </style>
   </head>
   <body>
-    <h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
-    <label for="howManyRounds">Playing To</label>
-    <select name="howManyRounds" id="howManyRounds">
-      <option value="3">3</option>
-      <option value="5">5</option>
-      <option value="7">7</option>
-      <option value="9">9</option>
-      <option value="11">11</option>
-      <option value="21">21</option>
-    </select>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="table-tennis-img.png" alt="" />
+                </figure>
+              </div>
+              <header class="card-header">
+                <p class="card-header-title">Ping Pong Score Keeper</p>
+                <button class="card-header-icon" aria-label="more options">
+                  <span class="icon">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <h1 class="title is-1 mb-3">
+                    <span id="p1Display">0</span> to
+                    <span id="p2Display">0</span>
+                  </h1>
 
-    <button id="p1Button">+1 Player One</button>
-    <button id="p2Button">+1 Player Two</button>
-    <button id="reset">Reset</button>
+                  <label for="howManyRounds" class="label is-large is-inline"
+                    >Playing To</label
+                  >
+                  <div class="select is-rounded">
+                    <select name="howManyRounds" id="howManyRounds">
+                      <option value="3">3</option>
+                      <option value="5">5</option>
+                      <option value="7">7</option>
+                      <option value="9">9</option>
+                      <option value="11">11</option>
+                      <option value="21">21</option>
+                    </select>
+                  </div>
+                  <p class="subtitle is-5 mt-5">
+                    Use the buttons below to keep score.
+                  </p>
+                </div>
+              </div>
+              <footer class="card-footer mt-0">
+                <button
+                  id="p1Button"
+                  class="is-primary button card-footer-item is-large"
+                >
+                  +1 Player One
+                </button>
+                <button
+                  id="p2Button"
+                  class="is-info button card-footer-item is-large"
+                >
+                  +1 Player Two
+                </button>
+                <button
+                  id="reset"
+                  class="is-danger button card-footer-item is-large"
+                >
+                  Reset
+                </button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="app.js"></script>
   </body>
