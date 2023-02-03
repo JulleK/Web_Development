@@ -49,7 +49,6 @@ const updateScores = (player, rival) => {
 
 p1.button.addEventListener('click', () => {
     updateScores(p1, p2)
-
 })
 
 p2.button.addEventListener('click', () => {
