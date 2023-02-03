@@ -1,12 +1,17 @@
-const p1Button = document.querySelector('#p1Button');
-const p2Button = document.querySelector('#p2Button');
-const resetButton = document.querySelector('#reset')
-const p1Display = document.querySelector('#p1Display');
-const p2Display = document.querySelector('#p2Display');
-const winningScoreSelect = document.querySelector('#howManyRounds')
+const p1 = {
+    score: 0,
+    button: document.querySelector('#p1Button'),
+    display: document.querySelector('#p1Display')
+}
 
-let p1Score = 0;
-let p2Score = 0;
+const p2 = {
+    score: 0,
+    button: document.querySelector('#p2Button'),
+    display: document.querySelector('#p2Display')
+}
+
+const resetButton = document.querySelector('#reset')
+const winningScoreSelect = document.querySelector('#howManyRounds')
 let winningScore = 3;
 let isGameOver = false;
 
@@ -14,42 +19,41 @@ const updateDisplay = (player, score) => {
     player.textContent = score
 }
 
-const scoreDisplay = (playerDisplay, pScore, rivalDisplay) => {
-    if (pScore === winningScore) {
-        isGameOver = true;
-        playerDisplay.classList.add('has-text-success')
-        rivalDisplay.classList.add('has-text-danger')
-        p1Button.disabled = true;
-        p2Button.disabled = true;
-    }
-    playerDisplay.textContent = pScore
-}
-
 const resetGame = () => {
-    p1Score = 0;
-    p2Score = 0;
+    p1.score = 0;
+    p2.score = 0;
     isGameOver = false;
-    p1Display.textContent = p1Score
-    p2Display.textContent = p2Score
-    p1Display.classList.remove('has-text-success', 'has-text-danger')
-    p2Display.classList.remove('has-text-success', 'has-text-danger')
+    p1.display.textContent = p1.score
+    p2.display.textContent = p2.score
+    p1.display.classList.remove('has-text-success', 'has-text-danger')
+    p2.display.classList.remove('has-text-success', 'has-text-danger')
 
-    p1Button.disabled = false;
-    p2Button.disabled = false;
+    p1.button.disabled = false;
+    p2.button.disabled = false;
 }
 
-p1Button.addEventListener('click', () => {
+const updateScores = (player, rival) => {
     if (!isGameOver) {
-        p1Score++;
-        scoreDisplay(p1Display, p1Score, p2Display)
+        player.score++;
+        if (player.score === winningScore) {
+            isGameOver = true;
+            player.display.classList.add('has-text-success')
+            rival.display.classList.add('has-text-danger')
+
+            player.button.disabled = true;
+            rival.button.disabled = true;
+        }
+        player.display.textContent = player.score
     }
+}
+
+p1.button.addEventListener('click', () => {
+    updateScores(p1, p2)
+
 })
 
-p2Button.addEventListener('click', () => {
-    if (!isGameOver) {
-        p2Score++;
-        scoreDisplay(p2Display, p2Score, p1Display)
-    }
+p2.button.addEventListener('click', () => {
+    updateScores(p2, p1)
 })
 
 winningScoreSelect.addEventListener('change', function () {
