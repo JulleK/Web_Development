@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <div>
+      <select name="chooseOperator" id="chooseOperator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+    </div>
+    <div>
+      <input id="firstNum" type="number" name="firstNum" />
+      <span id="operationDisplay">+</span>
+      <input id="secondNum" type="number" name="secondNum" />
+      <span>=</span>
+      <span id="result">0</span>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
