@@ -35,7 +35,7 @@ const resetGame = () => {
 const updateScores = (player, rival) => {
     if (!isGameOver) {
         player.score++;
-        if (player.score === winningScore) {
+        if (player.score >= winningScore && player.score > rival.score + 1) {
             isGameOver = true;
             player.display.classList.add('has-text-success')
             rival.display.classList.add('has-text-danger')
