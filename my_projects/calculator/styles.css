@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(247, 231, 212);
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+#calculator {
+    text-align: center;
+}
+
+#selectOperator {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+select {
+    background-color: #cfc5f7;
+    border-radius: 10%;
+    border: 3px solid rgb(28, 45, 112, 0.5);
+    color: rgb(66, 20, 91);
+    font-size: 20px;
+    -webkit-appearance: none;
+    width: 2.5em;
+    text-align: center;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px dotted black;
+    padding: 5px;
+}
+
+input {
+    height: 25px;
+    width: 180px;
+    font-size: 20px;
+    background-color: #cfc5f7;
+    border: 3px solid rgb(28, 45, 112, 0.5);
+}
+
+span {
+    font-size: 20px;
+}
+
+#equation {
+    position: relative;
+    left: 22px;
+}
