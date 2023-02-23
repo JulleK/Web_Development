@@ -23,11 +23,23 @@ input {
     color: #ffd60a;
     background-color: #003566;
     text-decoration: none;
+    text-align: center;
+    /* box-shadow: 0px 16px 69px -22px #ffd60a; */
 }
 
 #output {
-    color: #ffc400bc;
+    color: #ffc400d3;
     font-size: 25px;
+    max-width: 678px;
+    margin: 0 auto;
+    margin-top: 15px;
+    word-wrap: break-word;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin: 0px 0px 75px;
 }
 
 #wrapper {
