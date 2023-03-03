@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(62, 62, 62);
+}
+
+.player {
+    width: 50px;
+    height: 150px;
+    margin: 50px;
+    background-color: red;
+    border: 5px solid rgb(70, 15, 15);
+    /* display: inline-block; */
+    position: relative;
+}
+
+#gameBox {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    min-width: 700px;
+    height: 80vh;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    border: 10px solid black;
+    position: relative;
+}
