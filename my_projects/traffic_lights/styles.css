@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(35, 33, 33);
+}
+
+#wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.light {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 5px auto;
+}
+
+.trafficLights {
+    background-color: black;
+    height: 200px;
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.roof {
+    border-top: 5px solid rgb(73, 69, 69);
+    width: 50px;
+    height: 10px;
+    border-radius: 10rem 10rem 0 0;
+}
+
+.red {
+    background-color: red;
+    box-shadow: 0px 9px 40px 0px red;
+}
+
+.yellow {
+    background-color: yellow;
+    box-shadow: 0px 9px 40px 0px yellow;
+}
+
+.green {
+    background-color: green;
+    box-shadow: 0px 9px 40px 0px green;
+}
+
+button {
+    box-shadow: 0px 3px 18px -4px #1b550c;
+    background-color: #44c767;
+    border-radius: 28px;
+    border: 2px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 16px 31px;
+    text-decoration: none;
+    margin-top: 50px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #37a053;
+}
+
+button:disabled {
+    display: none;
+}
