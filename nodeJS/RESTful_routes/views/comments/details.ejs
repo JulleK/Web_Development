@@ -5,13 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Details</title>
+    <style>
+      form {
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
     <h1>Comment id: <%= comment.id %></h1>
     <h2><%= comment.comment %> - <%= comment.username %></h2>
-    <br />
     <form action="/comments">
       <button type="submit">Go back</button>
+    </form>
+    <form action="/comments/<%= comment.id %>/edit">
+      <button type="submit">Edit</button>
+    </form>
+    <form method="post" action="/comments/<%= comment.id %>/?_method=DELETE">
+      <button type="submit">Delete</button>
     </form>
   </body>
 </html>
