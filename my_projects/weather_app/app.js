@@ -10,6 +10,7 @@ const temperature = document.querySelector('#temperature')
 const weatherImg = document.querySelector('#weatherImg')
 const cityButton = document.querySelector('#cityButton')
 const weatherDescription = document.querySelector('#description')
+const cityName = document.querySelector('#cityName')
 
 cityForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -28,6 +29,7 @@ const searchCityCoordinates = async (searchedCity) => {
     }
     catch (e) {
         console.log("ERROR!! I DON'T KNOW THIS CITY!", e)
+        alert("Something went wrong! please try again with different city name.")
     }
 }
 
@@ -39,9 +41,11 @@ const searchWeather = async (lat, lon) => {
         temperature.innerText = Math.round(data.main.temp) + "°C"
         weatherImg.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
         weatherDescription.innerText = data.weather[0].description
+        cityName.innerText = data.name
     }
     catch (e) {
         console.log("SOMETHING WENT WRONG!", e)
+        alert("Something went wrong! please try again with different city name.")
     }
 }
 
