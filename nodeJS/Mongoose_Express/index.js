@@ -22,11 +22,17 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
-
 const categories = ['fruit', 'vegetable', 'dairy']
+
 app.get('/products', async (req, res) => {
-    const products = await Product.find({})
-    res.render('products/index', { products })
+    let { category } = req.query;
+    if (category) {
+        var products = await Product.find({ category })
+    } else {
+        var products = await Product.find({})
+        category = 'All'
+    }
+    res.render('products/index', { products, category })
 })
 
 app.get('/products/new', (req, res) => {
