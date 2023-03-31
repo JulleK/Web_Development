@@ -28,9 +28,9 @@
       />
       <label for="category">Select Category</label>
       <select name="category" id="category">
-        <option value="fruit">fruit</option>
-        <option value="vegetable">vegetable</option>
-        <option value="dairy">dairy</option>
+        <% for (let category of categories) {%>
+        <option value="<%= category %>" <%= product.category === category ? 'selected' : '' %> ><%= category %></option>
+        <% } %>
       </select>
       <button>Update Product</button>
       <a href="/products/<%= product._id %>">Cancel</a>
