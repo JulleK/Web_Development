@@ -5,6 +5,24 @@
 </div>
 <ul>
   <% for (let c of campgrounds) {%>
-  <li><a href="campgrounds/<%= c._id %>"><%= c.title %></a></li>
+  <div class="card mb-3">
+    <div class="row">
+      <div class="col-md-4">
+        <img class="img-fluid" src="<%= c.image %>" alt="" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><%= c.title %></h5>
+          <p class="card-text"><%= c.description %></p>
+          <p class="card-text">
+            <small class="text-muted"><%= c.location %></small>
+          </p>
+          <a class="btn btn-primary" href="/campgrounds/<%= c._id %>"
+            >View <%= c.title %></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
   <% } %>
 </ul>
