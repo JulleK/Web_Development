@@ -11,7 +11,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 function fibonacciNums() {
     const fibNums = [1, 2];
     let i;
-    // first 32 fib nums are under 4 million
+    // first 30 fib nums are under 4 million
     for (i = 2; i < 32; i++) {
         fibNums[i] = fibNums[i - 1] + fibNums[i - 2];
     }
