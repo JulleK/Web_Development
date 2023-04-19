@@ -82,6 +82,13 @@ app.delete('/products/:id', wrapAsync(async (req, res) => {
 }))
 
 app.use((err, req, res, next) => {
+    console.log(err.name)
+    // if (err.name === 'ValidationError')
+    //     validationErr = handleValidationErr(err)
+    next(err)
+})
+
+app.use((err, req, res, next) => {
     const { status = 500, message = "something went wrong" } = err
     res.status(status).send(message)
 })
