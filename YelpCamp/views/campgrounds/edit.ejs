@@ -5,6 +5,8 @@
     <form
       action="/campgrounds/<%= campground._id %>?_method=PATCH"
       method="POST"
+      novalidate
+      class="validated-form"
     >
       <div class="mb-3">
         <label class="form-label" for="title">Title</label>
@@ -14,6 +16,7 @@
           id="title"
           name="campground[title]"
           value="<%= campground.title %>"
+          validate
         />
       </div>
 
@@ -25,6 +28,7 @@
           id="location"
           name="campground[location]"
           value="<%= campground.location %>"
+          validate
         />
       </div>
 
@@ -36,6 +40,7 @@
           id="image"
           name="campground[image]"
           value="<%= campground.image %>"
+          validate
         />
       </div>
 
@@ -51,6 +56,7 @@
             aria-describedby="price-label"
             name="campground[price]"
             value="<%= campground.price %>"
+            validate
           />
         </div>
       </div>
@@ -62,6 +68,7 @@
           type="text"
           id="description"
           name="campground[description]"
+          validate
         >
 <%= campground.description %></textarea
         >
