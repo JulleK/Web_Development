@@ -1,0 +1,10 @@
+{
+    "ingredients": [
+        {"name": "tomato", "available": true, "price": 1.29, "count": 516},
+        {"name": "banana", "available": false, "price": 1.69, "count": 0},
+        {"name": "apple", "available": true, "price": 0.89, "count": 912},
+        {"name": "mushrooms", "available": false, "price": 2.15, "count": 0},
+        {"name": "raspberry", "available": true, "price": 2.03, "count": 26},
+        {"name": "white bread", "available": true, "price": 0.79, "count": 2516}
+    ]
+}
