@@ -1,7 +1,9 @@
 const Express = require('express');
 const Ingredient = require('./models/ingredient')
+const Meal = require('./models/meal')
 const mongoose = require('mongoose');
 const checkIngredientForm = require('./utils/checkIngredientForm')
+const checkMealForm = require('./utils/checkMealForm')
 const methodOverride = require('method-override')
 
 mongoose.connect('mongodb://127.0.0.1:27017/foodMaker')
@@ -22,6 +24,50 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+// ---MEALS ROUTES---
+// meals home page
+app.get('/meals', async (req, res) => {
+    const meals = await Meal.find()
+    res.render('meals/index', { meals })
+})
+
+// new meal route
+app.get('/meals/new', async (req, res) => {
+    const ingredients = await Ingredient.find({})
+    res.render('meals/new', { ingredients })
+})
+
+app.post('/meals', async (req, res) => {
+    const checkedForm = checkMealForm(req.body)
+    let { name, price, ingredients } = checkedForm
+
+    // find ingredients in db
+    for (let i = 0; i < ingredients.length; i++) {
+        ingredients[i] = await Ingredient.findOne({ name: ingredients[i] })
+    }
+
+    const newMeal = new Meal({ name, price, ingredients });
+    await newMeal.save();
+
+    res.redirect('/meals');
+})
+
+// meals show route
+app.get('/meals/:id', async (req, res) => {
+    const { id } = req.params
+    const meal = await Meal.findById(id).populate('ingredients')
+    res.render('meals/show', { meal })
+})
+
+// delete route
+app.delete('/meals/:id', async (req, res) => {
+    const { id } = req.params
+    await Meal.findByIdAndDelete(id)
+    res.redirect('/meals')
+})
+
+
+// ---INGREDIENTS ROUTES---
 // ingredients home page
 app.get('/ingredients', async (req, res) => {
     const ingredients = await Ingredient.find()
@@ -44,7 +90,7 @@ app.post('/ingredients', async (req, res) => {
     res.redirect('/ingredients');
 })
 
-// edit route
+// edit ingredient route
 app.get('/ingredients/:id/edit', async (req, res) => {
     const { id } = req.params
     const ingredient = await Ingredient.findById(id)
