@@ -13,8 +13,12 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item text-muted"><%= campground.location%></li>
+        <li class="list-group-item">
+          Created by <%= campground.author.username%>
+        </li>
         <li class="list-group-item">$<%= campground.price %> / night</li>
       </ul>
+      <% if (currentUser && campground.author._id.equals(currentUser._id)) {%>
       <div class="card-body">
         <form
           class="d-inline"
@@ -29,6 +33,7 @@
           >Edit</a
         >
       </div>
+      <% } %>
     </div>
   </div>
   <div class="col-6">
