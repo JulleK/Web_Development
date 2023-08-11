@@ -16,9 +16,10 @@ h1 {
 
 #screen {
     margin: 50px;
+    display: inherit;
 }
 
-#test-text {
+#test-text, #result {
     font-size: 50px;
     border: 1px solid var(--cyan);
     padding: 30px;
@@ -37,7 +38,7 @@ body {
     background-color: var(--dark-blue);
 }
 
-.word {
+.word, #result {
     color: var(--white);
 }
 
@@ -71,10 +72,14 @@ body {
 }
 
 #timer-clock {
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 50px;
     color: var(--white);
     text-align: center;
     text-decoration: underline overline var(--cyan);
     text-underline-offset: 13px;
+}
+
+#results-screen {
+    display: none;
 }

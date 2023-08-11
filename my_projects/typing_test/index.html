@@ -7,15 +7,19 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <h1>Typing Test</h1>
     <div id="screen">
-      <h1>Typing Test</h1>
       <div id="test-text"></div>
 
       <div id="user-inputs">
-        <input type="text" id="test-user-input" autofocus />
+        <input type="text" id="test-user-input" autocomplete="off" autofocus />
         <!-- <button id="test-reset">reset</button> -->
       </div>
-      <div id="timer-clock">15</div>
+      <div id="timer-clock"></div>
+    </div>
+
+    <div id="results-screen">
+      <div id="result">Your WPM is: <span id="wpm"></span></div>
     </div>
 
     <script src="app.js"></script>
