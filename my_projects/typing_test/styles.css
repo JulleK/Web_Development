@@ -1,0 +1,80 @@
+:root {
+    --white: #e8f1f0;
+    --red: #f35858;
+    --other-red: #ab6566;
+    --cyan: #37ccbb;
+    --dark-blue: #003049;
+    --yellow: #fcbf49;
+}
+
+h1 {
+    color: var(--cyan);
+    font-size: 64px;
+    text-align: center;
+    text-decoration: overline;
+}
+
+#screen {
+    margin: 50px;
+}
+
+#test-text {
+    font-size: 50px;
+    border: 1px solid var(--cyan);
+    padding: 30px;
+    min-width: 280px;
+    max-width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+#user-inputs {
+    margin: 50px;
+    text-align: center;
+}
+
+body {
+    background-color: var(--dark-blue);
+}
+
+.word {
+    color: var(--white);
+}
+
+.active {
+    color: var(--yellow);
+}
+
+.wrong {
+    color: var(--red);
+}
+
+.highlight-wrong {
+    background-color: var(--other-red);
+}
+
+.correct {
+    color: var(--cyan);
+}
+
+#test-user-input {
+    font-family: inherit;
+    width: 38%;
+    border: 0;
+    border-bottom: 2px solid var(--white);
+    outline: 0;
+    font-size: 50px;
+    color: var(--white);
+    padding: 10px;
+    background: transparent;
+
+}
+
+#timer-clock {
+    margin-top: 10%;
+    font-size: 50px;
+    color: var(--white);
+    text-align: center;
+    text-decoration: underline overline var(--cyan);
+    text-underline-offset: 13px;
+}
