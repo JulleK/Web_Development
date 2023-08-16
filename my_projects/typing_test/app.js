@@ -1,3 +1,5 @@
+import { words } from "./words.js"
+
 const testText = document.querySelector('#test-text')
 const userInput = document.querySelector('#test-user-input')
 const timerScreen = document.querySelector('#timer-clock')
@@ -8,33 +10,10 @@ const wpmResult = document.querySelector('#wpm')
 let totalCorrect = 0
 let testLetterCount = 0
 let testStarted = false
-let testTime = 30
-
-const words = [
-    "pioneer",
-    "willpower",
-    "porter",
-    "fossil",
-    "say",
-    "snack",
-    "magnitude",
-    "paragraph",
-    "piece",
-    "roar",
-    "chew",
-    "right",
-    "discourage",
-    "detector",
-    "fun",
-    "neighborhood",
-    "close",
-    "environment",
-    "torture",
-    "revoke",
-]
+let testTime = 20
 
 // creating words in the document
-for (word of words) {
+for (let word of words) {
     const newWord = document.createElement('span')
     newWord.classList.add('word')
     newWord.innerText = word + " "
