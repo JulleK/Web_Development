@@ -18,14 +18,14 @@ module.exports.createCampground = async (req, res, next) => {
         query: req.body.campground.location,
         limit: 1
     }).send()
-    res.send(geoData.body.features[0].geometry.coordinates)
 
-    // const campground = new Campground(req.body.campground);
-    // campground.images = req.files.map(image => ({ url: image.path, filename: image.filename }))
-    // campground.author = req.user._id;
-    // await campground.save();
-    // req.flash('success', 'Succesfully made a new campground!')
-    // res.redirect(`/campgrounds/${campground._id}`)
+    const campground = new Campground(req.body.campground);
+    campground.geometry = geoData.body.features[0].geometry
+    campground.images = req.files.map(image => ({ url: image.path, filename: image.filename }))
+    campground.author = req.user._id;
+    await campground.save();
+    req.flash('success', 'Succesfully made a new campground!')
+    res.redirect(`/campgrounds/${campground._id}`)
 }
 
 module.exports.showCampground = async (req, res) => {
