@@ -9,7 +9,15 @@
   <div class="card mb-3">
     <div class="row">
       <div class="col-md-4">
+        <% if(c.images.length) {%>
         <img class="img-fluid" src="<%= c.images[0].url %>" alt="" />
+        <% } else { %>
+        <img
+          class="img-fluid"
+          src="https://res.cloudinary.com/dbc4zumh8/image/upload/v1692553187/YelpCamp/joeq7hgz2iq8ruftqdw5.png"
+          alt=""
+        />
+        <% } %>
       </div>
       <div class="col-md-8">
         <div class="card-body">
