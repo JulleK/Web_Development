@@ -2,12 +2,12 @@ mapboxgl.accessToken = 'pk.eyJ1IjoianVsbGVrIiwiYSI6ImNsbGY5MnVsaTB4djkzcXFoeXZyb
 const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/streets-v12', // style URL
-    center: campgroundCoordinates, // starting position [lng, lat]
+    center: campground.geometry.coordinates, // starting position [lng, lat]
     zoom: 10, // starting zoom
 });
 
 new mapboxgl.Marker()
-    .setLngLat(campgroundCoordinates)
+    .setLngLat(campground.geometry.coordinates)
     .setPopup(
         new mapboxgl.Popup({ offset: 35 })
             .setHTML(
