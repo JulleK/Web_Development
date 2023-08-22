@@ -158,7 +158,8 @@
 </div>
 
 <script>
-  const campgroundCoordinates = <%- JSON.stringify(campground.geometry.coordinates) %>
+  const campground = <%- JSON.stringify(campground) %>;
+  const campgroundCoordinates = <%- JSON.stringify(campground.geometry.coordinates) %>;
 </script>
 
 <script src="/js/showPageMap.js"></script>
