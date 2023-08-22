@@ -10,7 +10,7 @@ const wpmResult = document.querySelector('#wpm')
 let totalCorrect = 0
 let testLetterCount = 0
 let testStarted = false
-let testTime = 20
+let testTime = 15
 
 // creating words in the document
 for (let word of words) {
