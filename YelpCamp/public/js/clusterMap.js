@@ -2,7 +2,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoianVsbGVrIiwiYSI6ImNsbGY5MnVsaTB4djkzcXFoeXZyb
 const map = new mapboxgl.Map({
     container: 'map',
     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-    style: 'mapbox://styles/mapbox/dark-v11',
+    style: 'mapbox://styles/mapbox/light-v11',
     center: [-103.5917, 40.6699],
     zoom: 3
 });
@@ -29,26 +29,26 @@ map.on('load', () => {
         paint: {
             // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
             // with three steps to implement three types of circles:
-            //   * Blue, 20px circles when point count is less than 100
-            //   * Yellow, 30px circles when point count is between 100 and 750
-            //   * Pink, 40px circles when point count is greater than or equal to 750
+            //   * Blue, 15px circles when point count is less than 30
+            //   * Yellow, 20px circles when point count is between 30 and 50
+            //   * Pink, 30px circles when point count is greater than or equal to 50
             'circle-color': [
                 'step',
                 ['get', 'point_count'],
                 '#51bbd6',
-                100,
+                30,
                 '#f1f075',
-                750,
+                50,
                 '#f28cb1'
             ],
             'circle-radius': [
                 'step',
                 ['get', 'point_count'],
-                20,
-                100,
+                15,
                 30,
-                750,
-                40
+                20,
+                50,
+                25
             ]
         }
     });
@@ -103,9 +103,7 @@ map.on('load', () => {
     // description HTML from its properties.
     map.on('click', 'unclustered-point', (e) => {
         const coordinates = e.features[0].geometry.coordinates.slice();
-        const mag = e.features[0].properties.mag;
-        const tsunami =
-            e.features[0].properties.tsunami === 1 ? 'yes' : 'no';
+        const { popUpMarkup } = e.features[0].properties
 
         // Ensure that if the map is zoomed out such that
         // multiple copies of the feature are visible, the
@@ -117,7 +115,7 @@ map.on('load', () => {
         new mapboxgl.Popup()
             .setLngLat(coordinates)
             .setHTML(
-                `magnitude: ${mag}<br>Was there a tsunami?: ${tsunami}`
+                popUpMarkup
             )
             .addTo(map);
     });
