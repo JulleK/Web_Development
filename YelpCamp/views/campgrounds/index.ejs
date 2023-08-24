@@ -5,13 +5,13 @@
   <a href="/campgrounds/new" class="btn btn-success mb-3">Add Campground</a>
 </div>
 <ul>
-  <% for (let c of campgrounds) {%>
+  <% for (let campground of campgrounds) {%>
   <p></p>
   <div class="card mb-3">
     <div class="row">
       <div class="col-md-4">
-        <% if(c.images.length) {%>
-        <img class="img-fluid" src="<%= c.images[0].url %>" alt="" />
+        <% if(campground.images.length) {%>
+        <img class="img-fluid" src="<%= campground.images[0].url %>" alt="" />
         <% } else { %>
         <img
           class="img-fluid"
@@ -22,13 +22,13 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title"><%= c.title %></h5>
-          <p class="card-text"><%= c.description %></p>
+          <h5 class="card-title"><%= campground.title %></h5>
+          <p class="card-text"><%= campground.description %></p>
           <p class="card-text">
-            <small class="text-muted"><%= c.location %></small>
+            <small class="text-muted"><%= campground.location %></small>
           </p>
-          <a class="btn btn-primary" href="/campgrounds/<%= c._id %>"
-            >View <%= c.title %></a
+          <a class="btn btn-primary" href="/campgrounds/<%= campground._id %>"
+            >View <%= campground.title %></a
           >
         </div>
       </div>
@@ -36,5 +36,9 @@
   </div>
   <% } %>
 </ul>
+
+<script>
+  const campgrounds =  { features: <%- JSON.stringify(campgrounds) %> }
+</script>
 
 <script src="./js/clusterMap.js"></script>
