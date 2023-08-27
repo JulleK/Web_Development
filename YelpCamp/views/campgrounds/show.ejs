@@ -3,8 +3,6 @@
 
 <div class="row">
   <div class="col-6">
-    <div id="map" style="width: 400px; height: 300px"></div>
-
     <div id="campgroundCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <% campground.images.forEach((img, index) => {%>
@@ -65,6 +63,8 @@
     </div>
   </div>
   <div class="col-6">
+    <div id="map" class="mb-3"></div>
+
     <% if (currentUser) {%>
     <h2 class="mb-3">Leave A Review</h2>
     <form
