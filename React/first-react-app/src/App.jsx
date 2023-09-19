@@ -4,6 +4,7 @@ import Die from "./Die.jsx";
 import ListPicker from "./ListPicker.jsx";
 import DoubleDice from "./DoubleDice.jsx";
 import Heading from "./Heading.jsx";
+import ColorList from "./ColorList.jsx";
 
 export default function App() {
   return (
@@ -16,12 +17,15 @@ export default function App() {
       <Die numSides={2} />
       <Die numSides={1} />
     <Die /> */}
-      <Heading color="cyan" text="Very good dice game!" />
+
+      {/* <Heading color="cyan" text="Very good dice game!" />
       <Heading text="Testtttt" />
       <Heading color="magenta" text="I love dice games!!" fontSize="30px" />
       <DoubleDice />
       <DoubleDice />
-      <DoubleDice />
+      <DoubleDice /> */}
+
+      <ColorList colors={["red", "pink", "purple", "teal", "orangered"]} />
     </div>
   );
 }
