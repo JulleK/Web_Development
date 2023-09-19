@@ -5,10 +5,17 @@ import ListPicker from "./ListPicker.jsx";
 import DoubleDice from "./DoubleDice.jsx";
 import Heading from "./Heading.jsx";
 import ColorList from "./ColorList.jsx";
+import Slots from "./Slots.jsx";
 
 export default function App() {
   return (
     <div className="App">
+      <Slots val1="🍒" val2="🍒" val3="🍒" />
+      <Slots val1="💰" val2="🎱" val3="💰" />
+      <Slots val1="🎱" val2="🎱" val3="🍒" />
+      <Slots val1="d" val2="d" val3="d" />
+      <Slots val1="a" val2="b" val3="c" />
+
       {/* <ListPicker values={[1, 2, 3]} />
       <Greeter person="Bob" from="Colt" />
       <RandomPokemon />
@@ -25,7 +32,7 @@ export default function App() {
       <DoubleDice />
       <DoubleDice /> */}
 
-      <ColorList colors={["red", "pink", "purple", "teal", "orangered"]} />
+      {/* <ColorList colors={["red", "pink", "purple", "teal", "orangered"]} /> */}
     </div>
   );
 }
