@@ -1,16 +1,17 @@
+import ShoppingListItem from "./ShoppingListItem";
+
 export default function ShoppingList({ items }) {
   return (
     <ul>
       {items.map((i) => (
-        <li
+        <ShoppingListItem
           key={i.id}
-          style={{
-            color: i.available ? "green" : "grey",
-            textDecoration: i.available ? "none" : "line-through",
-          }}
-        >
-          {i.name} - {i.quantity}
-        </li>
+          name={i.name}
+          quantity={i.quantity}
+          available={i.available}
+          // we can shorten passing props with spread operator
+          // {...i}
+        />
       ))}
     </ul>
   );
