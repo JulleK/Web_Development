@@ -6,15 +6,19 @@ import DoubleDice from "./DoubleDice.jsx";
 import Heading from "./Heading.jsx";
 import ColorList from "./ColorList.jsx";
 import Slots from "./Slots.jsx";
+import Clicker from "./Clicker.jsx";
+import Form from "./Form.jsx";
 
 export default function App() {
   return (
     <div className="App">
-      <Slots val1="🍒" val2="🍒" val3="🍒" />
+      {/* <Form /> */}
+      <Clicker message="ILOVE BANANASSS" buttonText="BANAN" />
+      {/* <Slots val1="🍒" val2="🍒" val3="🍒" />
       <Slots val1="💰" val2="🎱" val3="💰" />
       <Slots val1="🎱" val2="🎱" val3="🍒" />
       <Slots val1="d" val2="d" val3="d" />
-      <Slots val1="a" val2="b" val3="c" />
+      <Slots val1="a" val2="b" val3="c" /> */}
 
       {/* <ListPicker values={[1, 2, 3]} />
       <Greeter person="Bob" from="Colt" />
