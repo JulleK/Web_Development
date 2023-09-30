@@ -1,0 +1,6 @@
+.Toggler {
+    font-size: 4rem;
+    cursor: pointer;
+    user-select: none;
+    margin: 0;
+}

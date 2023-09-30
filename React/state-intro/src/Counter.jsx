@@ -7,7 +7,8 @@ export default function Counter() {
   }
   return (
     <div>
-      <button onClick={handleClick}>The count is: {count}</button>
+      {/* <button onClick={handleClick}>The count is: {count}</button> */}
+      <button onClick={() => setCount(count + 1)}>The count is: {count}</button>
     </div>
   );
 }
