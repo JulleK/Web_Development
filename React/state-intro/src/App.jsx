@@ -5,8 +5,9 @@ import ToggleCounter from "./ToggleCounter";
 function App() {
   return (
     <>
-      {/* <Counter /> */}
-      {/* <Toggler /> */}
+      <Counter />
+      <Counter />
+      <Toggler />
       <ToggleCounter />
     </>
   );
