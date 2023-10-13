@@ -9,10 +9,20 @@ export default function EmojiClicker() {
   function addEmoji() {
     setEmojis((oldEmojis) => [...oldEmojis, { id: uuid(), emoji: "😍" }]);
   }
+  function deleteEmoji(id) {
+    setEmojis(emojis.filter((e) => e.id !== id));
+  }
+  function deleteEmoji(id) {
+    setEmojis((oldEmojis) => oldEmojis.filter((e) => e.id !== id));
+  }
   return (
     <div>
       {emojis.map((e) => (
-        <span key={e.id} style={{ fontSize: "5rem" }}>
+        <span
+          onClick={() => deleteEmoji(e.id)}
+          key={e.id}
+          style={{ fontSize: "5rem" }}
+        >
           {e.emoji}
         </span>
       ))}
