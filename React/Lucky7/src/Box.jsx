@@ -1,12 +1,10 @@
 import "./Box.css";
-function Box({ isActive, toggle }) {
+export default function Box({ isActive, clickFunc }) {
   return (
     <div
-      onClick={toggle}
       className="Box"
       style={{ backgroundColor: isActive ? "red" : "black" }}
+      onClick={clickFunc}
     ></div>
   );
 }
-
-export default Box;
