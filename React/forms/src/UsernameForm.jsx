@@ -7,7 +7,7 @@ export default function UsernameForm() {
   }
   return (
     <div>
-      <label htmlFor="">Enter a username</label>
+      <label htmlFor="username">Enter a username</label>
       <input
         type="text"
         placeholder="username"
