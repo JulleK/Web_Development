@@ -1,6 +1,8 @@
 import UsernameForm from "./UsernameForm";
 import SignupForm from "./SignupForm";
 import BetterSignupForm from "./BetterSignupForm";
+import TheBestSignupForm from "./TheBestSignupForm";
+import ShoppingList from "./ShoppingList";
 import "./App.css";
 
 function App() {
@@ -8,7 +10,9 @@ function App() {
     <>
       {/* <UsernameForm /> */}
       {/* <SignupForm /> */}
-      <BetterSignupForm />
+      {/* <BetterSignupForm /> */}
+      {/* <TheBestSignupForm /> */}
+      <ShoppingList />
     </>
   );
 }
