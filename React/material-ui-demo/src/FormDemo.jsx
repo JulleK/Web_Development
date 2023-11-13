@@ -3,6 +3,7 @@ import Stack from "@mui/material/Stack";
 import Slider from "@mui/material/Slider";
 import VolumeDown from "@mui/icons-material/VolumeDown";
 import VolumeUp from "@mui/icons-material/VolumeUp";
+import { Box } from "@mui/material";
 
 import { useState } from "react";
 
@@ -10,7 +11,7 @@ export default function FormDemo() {
   const [name, setName] = useState("");
   const [volume, setVolume] = useState(50);
   return (
-    <div>
+    <Box sx={{ border: 1, borderColor: "primary.dark", p: 2 }}>
       <h3>name is: {name}</h3>
       <h3>volume is: {volume}</h3>
       <TextField
@@ -31,6 +32,6 @@ export default function FormDemo() {
         />
         <VolumeUp />
       </Stack>
-    </div>
+    </Box>
   );
 }
