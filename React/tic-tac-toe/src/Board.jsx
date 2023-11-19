@@ -2,25 +2,24 @@ import { useState } from "react";
 import Square from "./Square";
 import calculateWinner from "./calculateWinner.js";
 
-export default function Board() {
-  const [squares, setSquares] = useState(Array(9));
-  const [nextSign, setNextSign] = useState("X");
+export default function Board({ nextSign, squares, onPlay }) {
   const [status, setStatus] = useState("The next player:");
   function handleClick(i) {
     // if square already has a value or if already won return
     if (squares[i] || calculateWinner(squares)) return;
 
-    squares[i] = nextSign;
-    setSquares([...squares]);
+    const nextSquares = squares.slice();
+    nextSquares[i] = nextSign;
 
-    if (nextSign == "X") setNextSign("O");
-    else setNextSign("X");
+    // change next sign to next player
+    // "O" -> "X"; "X" -> "O";
+    // if (nextSign == "X") nextSquares[i] = "O";
+    // else nextSquares[i] = "X";
+
+    onPlay(nextSquares);
 
     // check if win
-    if (calculateWinner(squares)) {
-      setStatus("Winner: ");
-      setNextSign(calculateWinner(squares));
-    }
+    if (calculateWinner(nextSquares)) setStatus("Winner: ");
   }
   return (
     <div className="Board">
