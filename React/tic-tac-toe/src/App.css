@@ -1,3 +1,11 @@
+:root {
+  --yellow: #dbdfac;
+  --gray: #3a3335;
+  --green: #0d5d56;
+  --red: #ed6a5a;
+  --aqua: rgb(12, 188, 188);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,14 +14,14 @@
 }
 
 .Square {
-  width: 5em;
-  height: 5em;
-  background-color: white;
-  color: black;
-  font-size: large;
+  width: 7rem;
+  height: 7rem;
+  background-color: var(--gray);
+  color: var(--red);
+  font-size: 2.5em;
   margin: 0.3em;
-  border: 3px solid black;
   vertical-align: top;
+  padding: 0;
 }
 
 .Square:hover {
@@ -21,7 +29,63 @@
   scale: 1.05;
 }
 
+.winningSquare,
+.winningSquare:hover,
+.winningSquare:focus,
+.winningSquare:focus-visible {
+  color: var(--aqua);
+  border: 2px solid var(--aqua);
+}
+
+button {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 0.9em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border: 2px solid var(--red);
+}
+
+button:focus,
+button:focus-visible {
+  border: 2px solid var(--yellow);
+}
+
 .status {
   font-size: 1.5em;
   margin-bottom: 0.7em;
+}
+
+.Game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.move {
+  margin-bottom: 2px;
+}
+
+h1 {
+  color: var(--yellow);
+}
+
+.status {
+  color: var(--yellow);
+}
+
+.currentMove {
+  color: var(--yellow);
+  background-color: var(--gray);
+}
+
+.restart {
+  color: var(--red);
 }
