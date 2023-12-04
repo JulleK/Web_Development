@@ -1,0 +1,76 @@
+:root {
+  --black: #252323;
+  --gray: #3f3a3a;
+  --red: #ef767a;
+  --green: #9fffcb;
+  --dark-green: #25a18e;
+  --blue: #56cbf9;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--black);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* my custom styles */
+h1 {
+  color: var(--green);
+}
+
+input[type="text"] {
+  border-radius: 5px;
+  border: 2px solid black;
+  color: var(--green);
+  background-color: var(--gray);
+  height: 40px;
+  font-size: 30px;
+}
+
+input[type="text"]:focus {
+  border: 2px solid var(--dark-green);
+  outline: none;
+}
+
+input[type="text"]:hover {
+  border: 2px solid var(--green);
+}
+
+.Emoji {
+  font-size: 30px;
+  margin: 15px 0;
+  padding: 15px 60px;
+  border: 3px solid var(--red);
+  border-radius: 5px;
+}
+
+.Emoji:hover {
+  cursor: pointer;
+}
+
+.Emoji:active {
+  transform: scale(0.95);
+  transition: transform 100ms ease-out;
+}
