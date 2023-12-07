@@ -1,3 +1,6 @@
+// This function does the same thing as calculateWinner.js
+//  but returns the exact winning lines, not who won
+
 export default function winningSquares(squares) {
   const lines = [
     [0, 1, 2],
