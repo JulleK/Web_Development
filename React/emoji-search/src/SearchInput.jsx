@@ -7,9 +7,6 @@ export default function SearchInput({ value, handleChange }) {
         onChange={handleChange}
         spellCheck="false"
       />
-      {/* <button className="search-button" onClick={handleSearch}>
-        Search
-      </button> */}
     </div>
   );
 }
