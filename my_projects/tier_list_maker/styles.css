@@ -1,32 +1,32 @@
 body {
-    background-color: rgb(31, 31, 31);
+  background-color: rgb(31, 31, 31);
 }
 
 .tier-box {
-    width: 500px;
-    height: 150px;
-    border: 5px solid black;
-    margin-bottom: 10px;
+  width: 500px;
+  height: 150px;
+  border: 5px solid black;
+  margin-bottom: 10px;
 }
 
 .appendImg {
-    width: 130px;
-    height: 130px;
+  width: 130px;
+  height: 130px;
 }
 
 .tier-box .appendImg {
-    margin: 10px;
+  margin: 10px;
 }
 
 .tier-icon {
-    display: inline-block;
-    font-size: 50px;
-    color: white;
-    width: 100px;
-    height: 150px;
-    line-height: 150px;
-    vertical-align: middle;
-    background-color: red;
-    text-align: center;
-    margin-right: 10px;
+  display: inline-block;
+  font-size: 50px;
+  color: white;
+  width: 100px;
+  height: 150px;
+  line-height: 150px;
+  vertical-align: top;
+  background-color: red;
+  text-align: center;
+  margin-right: 10px;
 }
