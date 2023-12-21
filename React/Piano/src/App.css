@@ -1,0 +1,55 @@
+:root {
+  --white: rgb(222, 222, 222);
+}
+
+.octave {
+  display: flex;
+  position: relative;
+}
+
+.key {
+  margin: 0;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.white {
+  aspect-ratio: 1 / 5;
+  background-color: var(--white);
+  height: 220px;
+}
+
+.black {
+  aspect-ratio: 1 / 4;
+  background-color: black;
+  height: 125px;
+  position: absolute;
+  left: 500px;
+}
+
+.octave > .black:nth-of-type(2) {
+  left: 29px;
+}
+.octave > .black:nth-of-type(4) {
+  left: 76px;
+}
+.octave > .black:nth-of-type(7) {
+  left: 166px;
+}
+.octave > .black:nth-of-type(9) {
+  left: 212px;
+}
+.octave > .black:nth-of-type(11) {
+  left: 258px;
+}
+
+.pedalButton {
+  background-color: rgb(0, 0, 0);
+  color: wheat;
+  border-radius: 5px;
+}
+
+.pedalActive {
+  background-color: var(--white);
+  color: black;
+}
