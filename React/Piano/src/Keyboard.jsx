@@ -1,24 +1,18 @@
-import Key from "./Key";
-export default function Keyboard({ pedalActive = true }) {
-  return (
-    <div className="keyboard">
-      <div className="octave">
-        <Key value="C3" pedalActive={pedalActive} />
-        <Key color="black" value="Db3" pedalActive={pedalActive} />
-        <Key value="D3" pedalActive={pedalActive} />
-        <Key color="black" value="Eb3" pedalActive={pedalActive} />
-        <Key value="E3" pedalActive={pedalActive} />
+import Octave from "./Octave";
 
-        <Key value="F3" pedalActive={pedalActive} />
-        <Key color="black" value="Gb3" pedalActive={pedalActive} />
-        <Key value="G3" pedalActive={pedalActive} />
-        <Key color="black" value="Ab3" pedalActive={pedalActive} />
-        <Key value="A3" pedalActive={pedalActive} />
-        <Key color="black" value="Bb3" pedalActive={pedalActive} />
-        <Key value="B3" pedalActive={pedalActive} />
+export default function Keyboard({ octaveCount = 2, startingOctave = 3 }) {
+  const octaves = [];
+  for (let i = 0; i < octaveCount; i++) {
+    // lastOctave is a bool, it gets value by
+    //  checking if this is the last octave
+    octaves.push(
+      <Octave
+        lastOctave={i + 1 === octaveCount}
+        octaveHeight={startingOctave + i}
+        key={i}
+      />
+    );
+  }
 
-        <Key value="C4" />
-      </div>
-    </div>
-  );
+  return <div className="keyboard">{octaves.map((oct) => oct)}</div>;
 }
