@@ -1,6 +1,10 @@
 import Key from "./Key";
 
-export default function Octave({ octaveHeight = 3, lastOctave = false }) {
+export default function Octave({
+  octaveHeight = 3,
+  lastOctave = false,
+  volume,
+}) {
   const keys = [
     "C",
     "Db",
@@ -33,9 +37,16 @@ export default function Octave({ octaveHeight = 3, lastOctave = false }) {
 
         // the black one :O
         if (key[1] === "b")
-          return <Key value={newValue} color="black" key={newValue} />;
+          return (
+            <Key
+              value={newValue}
+              color="black"
+              key={newValue}
+              volume={volume}
+            />
+          );
         // the white one :)
-        return <Key value={newValue} key={newValue} />;
+        return <Key value={newValue} key={newValue} volume={volume} />;
       })}
     </div>
   );

@@ -1,6 +1,10 @@
 import Octave from "./Octave";
 
-export default function Keyboard({ octaveCount = 2, startingOctave = 3 }) {
+export default function Keyboard({
+  octaveCount = 2,
+  startingOctave = 3,
+  volume = 0.3,
+}) {
   const octaves = [];
   for (let i = 0; i < octaveCount; i++) {
     // lastOctave is a bool, it gets value by
@@ -10,6 +14,7 @@ export default function Keyboard({ octaveCount = 2, startingOctave = 3 }) {
         lastOctave={i + 1 === octaveCount}
         octaveHeight={startingOctave + i}
         key={i}
+        volume={volume}
       />
     );
   }

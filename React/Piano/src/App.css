@@ -46,3 +46,7 @@
 .octave > .black:nth-of-type(11) {
   left: 258px;
 }
+
+#volumeLabel {
+  display: block;
+}
