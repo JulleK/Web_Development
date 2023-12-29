@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sidebar-icon {
+    @apply relative mx-auto mb-2 mt-2 flex 
+    h-12 w-12 cursor-pointer items-center 
+    justify-center rounded-3xl bg-gray-300
+    text-blue-500 shadow-lg transition-all
+    duration-200 ease-linear hover:rounded-xl 
+      hover:bg-gray-400 hover:text-blue-700
+      dark:bg-gray-800 hover:dark:bg-gray-700;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute left-14 m-2 w-auto 
+    min-w-max origin-left scale-0 rounded-md
+    bg-gray-900 p-2 text-xs font-bold text-gray-50 
+    shadow-md transition-all duration-100;
+  }
+
+  .sidebar-hr {
+    @apply mx-2  rounded-full border bg-gray-50
+    bg-gray-800 bg-opacity-90
+    dark:border-gray-800;
+  }
+
+  .top-navigation {
+    @apply fixed m-0 flex h-12 w-full 
+    flex-row items-center justify-evenly 
+    bg-gray-200 bg-opacity-90 
+    shadow-lg 
+    dark:bg-gray-700;
+  }
+
+  .top-navigation-icon {
+    @apply ml-4 mr-3 cursor-pointer
+    text-gray-500 transition duration-300 
+    ease-in-out 
+    hover:text-blue-500;
+  }
+
+  .search {
+    @apply ml-0 mr-0 flex h-9 
+    w-1/5 items-center
+    justify-start
+    rounded-md bg-gray-400 px-2 text-gray-500 
+    shadow-md transition
+    duration-300 ease-in-out dark:bg-gray-600;
+  }
+
+  .search-input {
+    @apply w-full rounded bg-transparent
+    pl-1 font-sans font-semibold text-gray-600
+    no-underline  placeholder-gray-500
+    caret-gray-600 focus:outline-none
+    dark:text-gray-400 dark:caret-gray-400;
+  }
+
+  .title-hashtag {
+    @apply my-auto ml-2 scale-100 text-lg
+    font-semibold tracking-wider text-gray-500;
+  }
+
+  .title-text {
+    @apply my-auto ml-2 mr-auto text-xl font-semibold 
+    tracking-wider text-gray-500 text-opacity-80 
+    transition duration-300 ease-in-out;
+  }
+
+  .content-container {
+    @apply m-0 flex 
+    h-full w-full
+    flex-col 
+    overflow-hidden bg-gray-300 
+    dark:bg-gray-700;
+  }
+}
