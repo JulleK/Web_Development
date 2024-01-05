@@ -7,10 +7,10 @@
     @apply relative mx-auto mb-2 mt-2 flex 
     h-12 w-12 cursor-pointer items-center 
     justify-center rounded-3xl bg-gray-300
-    text-blue-500 shadow-lg transition-all
-    duration-200 ease-linear hover:rounded-xl 
-      hover:bg-gray-400 hover:text-blue-700
-      dark:bg-gray-800 hover:dark:bg-gray-700;
+    text-pink-500 shadow-lg transition-all duration-200
+    ease-linear hover:rounded-xl hover:bg-gray-400 
+      dark:bg-gray-800 dark:text-blue-500
+      dark:hover:bg-gray-700 dark:hover:text-blue-600;
   }
 
   .sidebar-tooltip {
@@ -27,11 +27,10 @@
   }
 
   .top-navigation {
-    @apply fixed m-0 flex h-12 w-full 
+    @apply m-0 flex h-12 w-full 
     flex-row items-center justify-evenly 
     bg-gray-200 bg-opacity-90 
-    shadow-lg 
-    dark:bg-gray-700;
+    shadow-lg dark:bg-gray-700;
   }
 
   .top-navigation-icon {
@@ -75,5 +74,53 @@
     flex-col 
     overflow-hidden bg-gray-300 
     dark:bg-gray-700;
+  }
+
+  .channel-bar {
+    @apply m-0 ml-16 h-screen w-72 overflow-hidden bg-gray-300
+     dark:bg-gray-800;
+  }
+
+  .channel-block {
+    @apply m-0 flex h-16 
+    items-center 
+    justify-center p-0;
+  }
+
+  .channel-block-text {
+    @apply my-auto ml-4 mr-auto 
+    align-middle text-lg 
+    font-bold tracking-wider text-gray-500 dark:text-gray-400;
+  }
+
+  .channel-container {
+    @apply m-0 flex flex-col items-center 
+    justify-start p-1;
+  }
+
+  .dropdown {
+    @apply m-0 w-full px-2 pb-2
+    transition duration-300 ease-in-out;
+  }
+
+  .dropdown-header {
+    @apply mx-0 flex cursor-pointer flex-row
+    items-center justify-evenly text-gray-500;
+  }
+
+  .dropdown-channel {
+    @apply ml-2 mr-auto mt-0.5 flex
+    cursor-pointer flex-row items-center
+    justify-evenly hover:bg-gray-200 dark:hover:bg-gray-700;
+  }
+
+  .dropdown-channel-text {
+    @apply mr-auto cursor-pointer text-gray-500 transition 
+    duration-300 ease-in-out
+    hover:text-pink-500 dark:hover:text-blue-500;
+  }
+
+  .dropdown-channel-icon {
+    @apply text-gray-500;
   }
 }
