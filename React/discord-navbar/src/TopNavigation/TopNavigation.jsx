@@ -1,5 +1,5 @@
-import { FaSearch, FaHashtag, FaRegBell, FaUserCircle } from "react-icons/fa";
-
+import { FaHashtag, FaRegBell, FaUserCircle } from "react-icons/fa";
+import Search from "./Search";
 import ThemeIcon from "./ThemeIcon";
 
 export default function TopNavigation() {
@@ -11,20 +11,6 @@ export default function TopNavigation() {
       <Search />
       <BellIcon />
       <UserCircle />
-    </div>
-  );
-}
-
-function Search() {
-  return (
-    <div className="search">
-      <input
-        className="search-input"
-        type="text"
-        placeholder="Search..."
-        spellcheck="false"
-      />
-      <FaSearch size="18" className="my-auto text-gray-500" />
     </div>
   );
 }
