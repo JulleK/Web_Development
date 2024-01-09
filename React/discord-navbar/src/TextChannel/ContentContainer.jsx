@@ -1,4 +1,4 @@
-import TopNavigation from "./TopNavigation/TopNavigation";
+import TopNavigation from "../TopNavigation/TopNavigation";
 
 export default function ContentContainer() {
   return (
