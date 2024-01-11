@@ -21,8 +21,8 @@
   }
 
   .sidebar-hr {
-    @apply mx-2  rounded-full border bg-gray-50
-    bg-gray-800 bg-opacity-90
+    @apply mx-2  rounded-full border
+    border-gray-200 bg-opacity-90
     dark:border-gray-800;
   }
 
