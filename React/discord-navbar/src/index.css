@@ -9,8 +9,8 @@
     justify-center rounded-3xl bg-gray-300
     text-pink-500 shadow-lg transition-all duration-200
     ease-linear hover:rounded-xl hover:bg-gray-400 
-      dark:bg-gray-800 dark:text-blue-500
-      dark:hover:bg-gray-700 dark:hover:text-blue-600;
+    dark:bg-gray-800 dark:text-blue-500
+    dark:hover:bg-gray-700 dark:hover:text-blue-600;
   }
 
   .sidebar-tooltip {
@@ -64,21 +64,21 @@
 
   .title-text {
     @apply my-auto ml-2 mr-auto text-xl font-semibold 
-    tracking-wider text-gray-500 text-opacity-80 
-    transition duration-300 ease-in-out;
+    tracking-wider text-gray-700 text-opacity-80 transition
+    duration-300 ease-in-out dark:text-gray-400;
   }
 
   .content-container {
     @apply m-0 flex 
-    h-full w-full
-    flex-col 
+    h-full w-full flex-col 
     overflow-hidden bg-gray-300 
     dark:bg-gray-700;
   }
 
   .channel-bar {
-    @apply m-0 ml-16 h-screen w-72 overflow-hidden bg-gray-300
-     dark:bg-gray-800;
+    @apply m-0 ml-16 h-screen w-72 
+    overflow-hidden bg-gray-300
+    dark:bg-gray-800;
   }
 
   .channel-block {
@@ -89,8 +89,8 @@
 
   .channel-block-text {
     @apply my-auto ml-4 mr-auto 
-    align-middle text-lg 
-    font-bold tracking-wider text-gray-500 dark:text-gray-400;
+    align-middle text-lg font-semibold tracking-wider
+    text-gray-600 dark:text-gray-400;
   }
 
   .channel-container {
@@ -99,13 +99,13 @@
   }
 
   .dropdown {
-    @apply m-0 w-full px-2 pb-2
+    @apply m-0 w-full px-2 pb-2 
     transition duration-300 ease-in-out;
   }
 
   .dropdown-header {
-    @apply mx-0 flex cursor-pointer flex-row
-    items-center justify-evenly text-gray-500;
+    @apply mx-0 flex cursor-pointer flex-row 
+    items-center justify-evenly text-gray-600 dark:text-gray-500;
   }
 
   .dropdown-channel {
@@ -115,12 +115,37 @@
   }
 
   .dropdown-channel-text {
-    @apply mr-auto cursor-pointer text-gray-500 transition 
-    duration-300 ease-in-out
-    hover:text-pink-500 dark:hover:text-blue-500;
+    @apply mr-auto cursor-pointer text-gray-600 transition duration-200 
+    ease-in-out hover:text-pink-500
+    dark:text-gray-500 dark:hover:text-blue-500;
   }
 
   .dropdown-channel-icon {
     @apply text-gray-500;
+  }
+
+  .post {
+    @apply mt-5 flex justify-start;
+  }
+
+  .post-content {
+    @apply flex flex-col;
+  }
+
+  .post-owner {
+    @apply ml-3 font-medium text-gray-700 dark:text-gray-300;
+  }
+
+  .post-text {
+    @apply ml-3 mr-12 text-left text-sm
+    text-gray-800 dark:text-gray-400;
+  }
+
+  .timestamp {
+    @apply ml-1.5 text-xs font-normal text-gray-500;
+  }
+
+  .avatar-wrapper {
+    @apply ml-2.5;
   }
 }
