@@ -12,9 +12,12 @@ export default function SideBar() {
     >
       <SideBarIcon icon={<FaFire size={28} />} text="Fireship 🔥🔥🔥" />
       <Divider />
-      <SideBarIcon icon={<BsPlus size={32} />} />
-      <SideBarIcon icon={<BsFillLightningFill size={20} />} />
-      <SideBarIcon icon={<FaPoo size={22} />} />
+      <SideBarIcon icon={<BsPlus size={40} />} text="Discord Demo ❤️❤️❤️" />
+      <SideBarIcon icon={<BsGearFill size={22} />} text="React ❄️" />
+      <SideBarIcon
+        icon={<BsFillLightningFill size={23} />}
+        text="Tailwind 💨"
+      />
     </div>
   );
 }
