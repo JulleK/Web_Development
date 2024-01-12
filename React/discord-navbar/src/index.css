@@ -72,7 +72,7 @@
     @apply m-0 flex 
     h-full w-full flex-col 
     overflow-hidden bg-gray-300 
-    dark:bg-gray-700;
+    pb-16 dark:bg-gray-700;
   }
 
   .channel-bar {
@@ -147,5 +147,31 @@
 
   .avatar-wrapper {
     @apply ml-2.5;
+  }
+
+  .bottom-bar {
+    @apply fixed;
+  }
+
+  .bottom-bar {
+    @apply fixed bottom-2 right-8 flex
+    h-10 items-center justify-between
+    rounded-lg bg-gray-400 
+    px-2 shadow-lg  sm:left-72 lg:left-[19rem] xl:left-80
+    dark:bg-gray-600;
+  }
+
+  .bottom-bar-icon {
+    @apply fixed text-pink-500
+    hover:cursor-pointer hover:text-pink-600
+    dark:text-blue-500 dark:hover:text-blue-600;
+  }
+
+  .bottom-bar-input {
+    @apply ml-6 mr-4 h-auto w-full cursor-text
+    overflow-y-hidden 
+    bg-transparent font-semibold text-gray-500
+    no-underline placeholder-gray-500 outline-none
+    dark:text-gray-400;
   }
 }
