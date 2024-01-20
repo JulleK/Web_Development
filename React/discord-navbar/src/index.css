@@ -125,28 +125,32 @@
   }
 
   .post {
-    @apply mt-5 flex justify-start;
+    @apply flex justify-start py-2.5 hover:bg-gray-800;
   }
 
   .post-content {
     @apply flex flex-col;
   }
 
-  .post-owner {
-    @apply ml-3 font-medium text-gray-700 dark:text-gray-300;
+  .post-info {
+    @apply ml-3 font-medium text-gray-700
+   dark:text-gray-300;
   }
 
+  .post-owner {
+    @apply hover:cursor-pointer hover:underline;
+  }
+
+  .post-timestamp {
+    @apply ml-1.5 text-xs font-normal text-gray-500;
+  }
   .post-text {
     @apply ml-3 mr-12 text-left text-sm
     text-gray-800 dark:text-gray-400;
   }
 
-  .timestamp {
-    @apply ml-1.5 text-xs font-normal text-gray-500;
-  }
-
-  .avatar-wrapper {
-    @apply ml-2.5;
+  .post-avatar {
+    @apply ml-2.5 hover:cursor-pointer;
   }
 
   .bottom-bar {
