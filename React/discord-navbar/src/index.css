@@ -125,7 +125,8 @@
   }
 
   .post {
-    @apply flex justify-start py-2.5 hover:bg-gray-800;
+    @apply flex justify-start py-2.5
+    hover:bg-gray-400 dark:hover:bg-gray-800;
   }
 
   .post-content {
