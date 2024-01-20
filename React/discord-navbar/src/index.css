@@ -179,3 +179,11 @@
     dark:text-gray-400;
   }
 }
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-500;
+}
