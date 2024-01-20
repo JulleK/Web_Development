@@ -69,14 +69,14 @@
   }
 
   .content-container {
-    @apply m-0 flex 
-    h-full w-full flex-col 
+    @apply m-0 flex h-full
+    min-h-screen w-full flex-col 
     overflow-hidden bg-gray-300 
     pb-16 dark:bg-gray-700;
   }
 
   .channel-bar {
-    @apply m-0 ml-16 h-screen w-72 
+    @apply m-0 ml-16 h-auto w-72 
     overflow-hidden bg-gray-300
     dark:bg-gray-800;
   }
