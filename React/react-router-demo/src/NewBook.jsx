@@ -1,3 +1,3 @@
 export default function NewBook() {
-  return <>Create a new Book</>;
+  return <h2>Create a new Book</h2>;
 }
