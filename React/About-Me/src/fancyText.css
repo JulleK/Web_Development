@@ -9,10 +9,6 @@
     color 500ms ease;
 }
 
-.fancy-hover:hover > .letter {
-  @apply text-green-500 duration-700;
-}
-
 .fancy-hover:hover > .letter:nth-child(1) {
   transform: translate(-30%, 10%) rotate(-30deg);
 }
