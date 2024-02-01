@@ -13,18 +13,18 @@ function App() {
     getFancy(fancyID);
   }, []);
   return (
-    <div className="ml-4 mt-4 font-sans">
+    <div className="pt-4 font-sans">
       <nav>
         <Link
           to="/about"
           className="block cursor-pointer text-center text-8xl font-bold"
         >
-          <span className="hover:text-aqua-500 transition-all duration-500">
+          <span className="transition-all duration-500 hover:text-aqua-500">
             About
           </span>{" "}
           <span
             id={fancyID}
-            className="fancy-hover hover:text-aqua-500 transition-all duration-700"
+            className="fancy-hover transition-all duration-700 hover:text-aqua-500"
           >
             JulleK
           </span>
