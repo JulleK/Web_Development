@@ -1,6 +1,17 @@
+import { useState, useEffect } from "react";
 export default function About() {
+  // with this state we add a
+  //  content appearing transition later
+
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
   return (
-    <div className="mx-auto mt-14 text-center text-3xl">
+    <div
+      className="mx-auto mt-14 text-center text-3xl transition-all duration-700"
+      style={{ opacity: isLoading ? 0 : 1 }}
+    >
       <div className="mb-3">
         <img
           className="mx-auto w-40 rounded-full"
