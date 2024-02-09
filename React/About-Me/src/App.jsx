@@ -19,12 +19,12 @@ function App() {
           to="/about"
           className="block cursor-pointer text-center text-8xl font-bold"
         >
-          <span className="transition-all duration-500 hover:text-aqua-500">
+          <span className="text-aqua-500 transition-all duration-500 hover:text-white">
             About
           </span>{" "}
           <span
             id={fancyID}
-            className="fancy-hover transition-all duration-700 hover:text-aqua-500"
+            className="fancy-hover text-aqua-500 transition-all duration-700 hover:text-white"
           >
             JulleK
           </span>
