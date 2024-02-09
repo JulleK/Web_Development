@@ -13,7 +13,7 @@ function App() {
     getFancy(fancyID);
   }, []);
   return (
-    <div className="pt-4 font-sans">
+    <div className="flex min-h-screen flex-col pt-4 font-sans">
       <nav>
         <Link
           to="/about"
@@ -30,10 +30,16 @@ function App() {
           </span>
         </Link>
       </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <article>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </article>
+      <footer className="mb-1 mt-auto text-center text-gray-600">
+        © Copyright 2024 JulleK <br />
+        All Rights Reserved
+      </footer>
     </div>
   );
 }
