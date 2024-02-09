@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import InterestsShort from "./InterestsShort";
+
 export default function About() {
   // with this state we add a
   //  content appearing transition later
@@ -20,7 +22,7 @@ export default function About() {
         />
       </div>
 
-      <div className="border-b-2 pb-8 text-3xl">
+      <div className="pb-8 text-3xl">
         <p>Hi, my name is Julian, I am from Poland 🇵🇱</p>
         <p>I am 18 years old and I love Programming❤</p>
         <br />
@@ -35,9 +37,9 @@ export default function About() {
           you can see the technologies I use
         </p>
       </div>
-      <div className="mt-20">
-        <h3 className="text-5xl font-bold underline">My Interests</h3>
-      </div>
+
+      <InterestsShort />
+
       <div className="mt-40">
         <h3 className="font-bold" id="technologies">
           Technologies I Use
