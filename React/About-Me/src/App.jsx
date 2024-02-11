@@ -15,20 +15,24 @@ function App() {
   return (
     <div className="flex min-h-screen flex-col pt-4 font-sans">
       <nav>
-        <Link
-          to="/about"
-          className="block cursor-pointer text-center text-8xl font-bold"
+        <div
+          className="mx-auto w-fit cursor-pointer
+           text-center text-8xl font-bold shadow"
         >
-          <span className="text-aqua-500 transition-all duration-500 hover:text-white">
+          <Link
+            to="/about"
+            className="mr-8 text-aqua-500 transition-all duration-300 hover:text-white"
+          >
             About
-          </span>{" "}
-          <span
+          </Link>
+          <Link
+            to="/"
             id={fancyID}
             className="fancy-hover text-aqua-500 transition-all duration-700 hover:text-white"
           >
             JulleK
-          </span>
-        </Link>
+          </Link>
+        </div>
       </nav>
       <article>
         <Routes>
