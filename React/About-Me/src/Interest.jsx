@@ -6,14 +6,21 @@ export default function Interest({ title, text }) {
   const handleClick = () => {
     setDropdownActive(!dropdownActive);
   };
+
   return (
     <div className="mt-4">
       <div onClick={handleClick} className="hover:cursor-pointer">
         <h5 className="inline">{title}</h5>
         {dropdownActive ? (
-          <RiArrowDropDownLine className="inline" size={34} />
+          <RiArrowDropDownLine
+            className="inline transition-all duration-200 ease-out"
+            size={34}
+          />
         ) : (
-          <RiArrowDropDownLine className="inline rotate-180" size={34} />
+          <RiArrowDropDownLine
+            className="inline rotate-180 transition-all duration-200 ease-in"
+            size={34}
+          />
         )}
       </div>
 
