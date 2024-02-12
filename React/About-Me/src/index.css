@@ -1,13 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* body {
-  height: 100vh;
-  margin: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-    url("https://res.cloudinary.com/dbc4zumh8/image/upload/v1692976152/scott-goodwill-y8Ngwq34_Ak-unsplash_wk8hv0.jpg");
-  background-size: cover;
-  background-position-y: -50px;
-  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.65);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.65);
-} */
