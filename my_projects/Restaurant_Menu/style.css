@@ -1,0 +1,101 @@
+html {
+  --blue: rgb(54, 135, 192);
+  --dark-blue: rgb(40, 102, 145);
+  --orange: rgb(239, 168, 80);
+  --dark-orange: rgb(187, 121, 41);
+  --brown: rgb(69, 51, 20);
+  --light-brown: rgb(112, 84, 37);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(254, 239, 220);
+}
+
+nav {
+  margin: 0;
+  width: 100vw;
+  text-align: center;
+  background-color: rgb(255, 228, 196);
+}
+
+h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 900;
+  padding: 20px;
+  color: var(--dark-blue);
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 30px 0;
+}
+
+.navigation a {
+  /* margin: 0 100px; */
+  font-size: 35px;
+  color: var(--blue);
+  text-decoration: none;
+  padding: 0 100px;
+  border-right: 2px solid var(--blue);
+}
+
+.navigation a:last-child {
+  border: none;
+}
+
+.navigation a:hover {
+  color: var(--dark-blue);
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu-header {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--orange);
+  margin-bottom: 0;
+}
+
+.menu-section-header {
+  font-size: 45px;
+  font-weight: 900;
+  margin: 40px 0 15px;
+  color: var(--dark-orange);
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item {
+  font-size: 23px;
+  padding: 6px;
+  font-weight: 600;
+  color: var(--brown);
+}
+
+.menu-item:hover {
+  /* cursor: pointer; */
+  color: var(--light-brown);
+}
+
+footer {
+  margin-bottom: 10px;
+  margin-top: auto;
+  text-align: center;
+  color: rgb(124, 123, 123);
+  /* mb-1 mt-auto text-center text-gray-600 */
+}
