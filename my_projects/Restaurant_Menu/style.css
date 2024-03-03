@@ -60,18 +60,25 @@ h1 {
   text-align: center;
 }
 
-.menu-header {
+.menu-header,
+.about-header,
+.kontakt-header {
   font-size: 40px;
   font-weight: 900;
   color: var(--orange);
   margin-bottom: 0;
+  text-align: center;
 }
 
-.menu-section-header {
+.menu-section-header,
+.about-header-dark,
+.kontakt-header-dark,
+.danie-opis {
   font-size: 45px;
   font-weight: 900;
   margin: 40px 0 15px;
   color: var(--dark-orange);
+  text-align: center;
 }
 
 .menu-section {
@@ -98,4 +105,18 @@ footer {
   text-align: center;
   color: rgb(124, 123, 123);
   /* mb-1 mt-auto text-center text-gray-600 */
+}
+
+.danie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.danie-img {
+  max-width: 500px;
+  max-height: 450px;
+  border-radius: 10%;
 }
