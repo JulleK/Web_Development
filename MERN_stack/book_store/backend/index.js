@@ -1,4 +1,4 @@
-import express from "express";
+import express, { response } from "express";
 import mongoose from "mongoose";
 import { PORT, mongodbUrl } from "./config.js";
 import { Book } from "./models/bookModel.js";
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 // Route to create a new book
 app.post("/books", async (req, res) => {
   try {
-    if (!req.body.title || !req.body.author || publishYear) {
+    if (!req.body.title || !req.body.author || !req.body.publishYear) {
       return res.status(400).send({
         message: "Send all required fields: title, author, publishYear",
       });
