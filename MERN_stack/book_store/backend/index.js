@@ -13,7 +13,6 @@ app.get("/", (req, res) => {
   return res.send("WELCOME WELCOME!!!");
 });
 
-// Route to create a new book
 // Route to show all books
 app.get("/books", async (req, res) => {
   try {
@@ -28,6 +27,7 @@ app.get("/books", async (req, res) => {
   }
 });
 
+// Route to create a new book
 app.post("/books", async (req, res) => {
   try {
     if (!req.body.title || !req.body.author || !req.body.publishYear) {
