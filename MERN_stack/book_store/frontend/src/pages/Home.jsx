@@ -4,6 +4,7 @@ import Spinner from "../components/Spinner";
 import { Link } from "react-router-dom";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
 import BooksTable from "../components/BooksTable";
+import BooksCard from "../components/BooksCard";
 
 function Home() {
   const [books, setBooks] = useState([]);
