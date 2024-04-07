@@ -1,0 +1,46 @@
+:root {
+  --light-gold: rgb(254, 187, 63);
+  --dark-gold: rgb(215, 147, 23);
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+@keyframes pan {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.star-container {
+  height: 100%;
+  background: radial-gradient(circle, var(--light-gold), var(--dark-gold));
+}
+
+.star-pattern {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  min-width: 1200px;
+  background-image: url("https://assets.codepen.io/1468070/Star+Pattern+3.svg");
+  background-size: 10%;
+  background-repeat: repeat;
+  opacity: 10%;
+  /* translate: -50% 0%;
+  left: 50%;
+  top: 0px; */
+  animation: pan 120s linear infinite;
+}
+
+.star-gradient-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle, transparent 60%, var(--dark-gold));
+}
