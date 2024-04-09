@@ -4,9 +4,10 @@
 }
 
 body {
-  height: 100vh;
+  height: 10vh;
   margin: 0;
   overflow: hidden;
+  cursor: none;
 }
 
 @keyframes pan {
@@ -18,12 +19,15 @@ body {
   }
 }
 
-.star-container {
+#star-container {
+  position: absolute;
+  top: 0;
   height: 100%;
+  width: 100%;
   background: radial-gradient(circle, var(--light-gold), var(--dark-gold));
 }
 
-.star-pattern {
+#star-pattern {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -38,9 +42,53 @@ body {
   animation: pan 120s linear infinite;
 }
 
-.star-gradient-overlay {
+#star-gradient-overlay {
   position: absolute;
   height: 100%;
   width: 100%;
   background: radial-gradient(circle, transparent 60%, var(--dark-gold));
+}
+
+#cursor {
+  position: absolute;
+  height: 2rem;
+}
+
+#cursor > img {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+#cursor-eyes {
+  display: flex;
+  flex-direction: row;
+
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.cursor-eye {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 2px;
+  height: 8px;
+  width: 3px;
+  border-radius: 3px;
+  animation: blink 7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1);
+  }
+  93% {
+    transform: scale(1);
+  }
+  94% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
