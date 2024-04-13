@@ -1,7 +1,5 @@
 // https://javascript.info/websocket
-let socket = new WebSocket(
-  "wss://javascript.info/article/websocket/demo/hello"
-);
+let socket = new WebSocket("wss://javascript.info/article/websocket/demo");
 
 socket.addEventListener("open", () => {
   console.log("Connection estabilished");
@@ -9,6 +7,22 @@ socket.addEventListener("open", () => {
   socket.send("My name is Johny");
 });
 
-socket.addEventListener("message", (evt) => {
-  console.log(`%c${evt.data}`, "color: cyan");
+socket.addEventListener("message", (event) => {
+  console.log(`%c${event.data}`, "color: cyan");
+});
+
+socket.addEventListener("close", (event) => {
+  if (event.wasClean === true) {
+    console.log(
+      `%c[close] connection closed cleanly, code=${event.code}, reason="${event.reason}"`,
+      "color: orange"
+    );
+  } else {
+    console.log(`%c[close] connection died!`, "color: red");
+  }
+});
+
+socket.addEventListener("error", (error) => {
+  console.log("%c[error] an error occured", "color: red");
+  console.error(error);
 });
