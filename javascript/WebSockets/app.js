@@ -1,5 +1,7 @@
 // https://javascript.info/websocket
-let socket = new WebSocket("wss://javascript.info/article/websocket/demo");
+let socket = new WebSocket(
+  "wss://javascript.info/article/websocket/demo/hello"
+);
 
 socket.addEventListener("open", () => {
   console.log("Connection estabilished");
