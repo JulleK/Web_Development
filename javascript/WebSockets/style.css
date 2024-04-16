@@ -6,10 +6,9 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
 }
 
-form {
+.message-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,12 +17,12 @@ form {
   height: 400px;
   width: 700px;
   border-radius: 10px;
+  margin-top: 10%;
 }
 
 input[type="text"] {
   width: 500px;
   height: 70px;
-  margin: 20px;
   font-size: 30px;
   padding-left: 23px;
   border-radius: 10px;
@@ -57,7 +56,8 @@ input[type="submit"]:hover {
 
 #messages {
   color: white;
-  margin: 7% 0;
+  margin: 5% 0;
+  text-align: center;
   font-size: 40px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -76,4 +76,9 @@ input[type="submit"]:hover {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.message {
+  margin: 10px 0;
+  list-style-type: none;
 }

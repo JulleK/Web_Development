@@ -1,32 +1,20 @@
-// // https://javascript.info/websocket
-// let socket = new WebSocket(
-//   "wss://javascript.info/article/websocket/demo/hello"
-// );
+const socket = new WebSocket("wss://javascript.info/article/websocket/chat/ws");
+const messageForm = document.querySelector(".message-form");
+const messageDisplay = document.querySelector("#messages");
 
-// socket.addEventListener("open", () => {
-//   console.log("Connection estabilished");
-//   console.log("Sending to server");
-//   socket.send("My name is Johny");
-// });
+messageForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let userMessage = event.target[0].value;
+  socket.send(userMessage);
+});
 
-// socket.addEventListener("message", (event) => {
-//   console.log(`%c${event.data}`, "color: cyan");
-// });
+socket.addEventListener("message", (event) => {
+  console.log(event);
+  let message = event.data;
+  messageDisplay.innerHTML += `<li class="message">${message}</li>`;
+});
 
-// socket.addEventListener("close", (event) => {
-//   if (event.wasClean === true) {
-//     console.log(
-//       `%c[close] connection closed cleanly, code=${event.code}, reason="${event.reason}"`,
-//       "color: orange"
-//     );
-//   } else {
-//     console.log(`%c[close] connection died!`, "color: red");
-//   }
-// });
-
-// socket.addEventListener("error", (error) => {
-//   console.log("%c[error] an error occured", "color: red");
-//   console.error(error);
-// });
-
-// ------------------------------------------------------
+socket.addEventListener("close", (event) => {
+  console.log("BYE BYE!!!");
+  console.log(event);
+});
