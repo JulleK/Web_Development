@@ -1,22 +1,12 @@
-import { createServer } from "http";
-import { readFileSync } from "fs";
 import { WebSocketServer } from "ws";
-
-// http server config
-const server = createServer((req, res) => {
-  res.write("Hello World!");
-  res.end();
-}).listen(8080);
-console.log("server listening on port 8080");
-
-// websocket config
-const wss = new WebSocketServer({ server });
+const wss = new WebSocketServer({ port: 8080 });
 wss.on("connection", (ws) => {
+  console.log(ws);
   ws.on("error", console.error);
 
   ws.on("message", (data) => {
-    console.log("received: %s", data);
+    console.log(`received: ${data}`);
+    ws.send(`${data}`);
   });
-
-  ws.send("wss connection estabilished");
 });
+console.log("server open on ws://localhost:8080");
