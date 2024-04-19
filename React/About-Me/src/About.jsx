@@ -18,7 +18,7 @@ export default function About() {
       <div className="mb-5">
         <img
           className="mx-auto w-40 rounded-full"
-          src="/src/images/me2.jpg"
+          src="/src/images/me.jpg"
           alt="cool photo of JulleK"
         />
       </div>
