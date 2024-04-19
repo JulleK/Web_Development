@@ -1,18 +1,21 @@
 ## General Info
+
 This is my Web Development learning directory
 
 I have some small projects here, and also some big ones!
 
 ## Table of contents
+
 - [General Info](#general-info)
 - [Technologies](#technologies)
 - [Backend Setup](#run-server-applications)
 - [Frontend Setup](#run-frontend-applications)
 - [React Setup](#run-react-applications)
 
-
 ## Technologies
+
 Technologies I use:
+
 - HTML v5
 - CSS v3
 - JavaScript ES6
@@ -25,8 +28,8 @@ Technologies I use:
 - prettier
 - vite
 
-
 ### Run Server Applications
+
 To run most of the backend apps:
 
 ```
@@ -36,14 +39,18 @@ $ node index.js
 ```
 
 ### Run Frontend Applications
+
 To run frontend apps you can either:
+
 - use Live Server (reccomended)
 - open index.html file in your browser
 
 all of the apps were written while using Live Server
 
 ### Run React Applications
+
 To run React apps:
+
 ```
 $ cd PROJECT_DIRECTORY
 $ npm install
