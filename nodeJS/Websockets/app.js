@@ -1,4 +1,5 @@
-const socket = new WebSocket("wss://javascript.info/article/websocket/chat/ws");
+const socket = new WebSocket("wss://localhost:8080");
+
 const messageForm = document.querySelector(".message-form");
 const messageDisplay = document.querySelector("#messages");
 
@@ -6,6 +7,10 @@ messageForm.addEventListener("submit", (event) => {
   event.preventDefault();
   let userMessage = event.target[0].value;
   socket.send(userMessage);
+});
+
+socket.addEventListener("open", (event) => {
+  console.log("connection to wss open");
 });
 
 socket.addEventListener("message", (event) => {
