@@ -37,8 +37,10 @@ $ node index.js
 
 ### Run Frontend Applications
 To run frontend apps you can either:
-- use Live Server
+- use Live Server (reccomended)
 - open index.html file in your browser
+
+all of the apps were written while using Live Server
 
 ### Run React Applications
 To run React apps:
@@ -48,3 +50,4 @@ $ npm install
 $ npm run dev
 ```
 
+all of the react apps were created with Vite
