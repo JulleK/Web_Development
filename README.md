@@ -28,6 +28,8 @@ Technologies I use:
 - prettier
 - vite
 
+## Setup
+
 ### Run Server Applications
 
 To run most of the backend apps:
