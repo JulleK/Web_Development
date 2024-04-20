@@ -1,8 +1,7 @@
 // weather api docs https://openweathermap.org/current
-// api key: cf6a9e772a821a6992f85a5864771ed3
 // https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=
 
-const apiKey = "cf6a9e772a821a6992f85a5864771ed3";
+const apiKey = "--- API KEY HERE ---";
 
 const cityForm = document.querySelector("#cityForm");
 const cityInput = document.querySelector("#cityInput");
