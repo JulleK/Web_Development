@@ -16,15 +16,15 @@ I have some small projects here, and also some big ones!
 
 Technologies I use:
 
-- HTML v5
-- CSS v3
-- JavaScript ES6
-- React.js v18.2
-- Node.js v20
-- Express.js v4.18
-- Mongo.db v7.0
-- Mongoose v8
-- Tailwind CSS v3.4
+- HTML
+- CSS
+- JavaScript
+- React.js
+- Node.js
+- Express.js
+- Mongo.db
+- Mongoose
+- Tailwind
 - prettier
 - vite
 
