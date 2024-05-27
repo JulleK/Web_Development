@@ -2,8 +2,6 @@
 
 This is my Web Development learning directory
 
-I have some small projects here, and also some big ones!
-
 ## Table of contents
 
 - [General Info](#general-info)
