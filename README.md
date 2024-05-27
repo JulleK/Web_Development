@@ -21,10 +21,7 @@ Technologies I use:
 - Node.js
 - Express.js
 - Mongo.db
-- Mongoose
 - Tailwind
-- prettier
-- vite
 
 ## Setup
 
