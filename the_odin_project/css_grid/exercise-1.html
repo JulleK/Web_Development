@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">Header</h1>
+      <div class="sidebar">Sidebar</div>
+      <nav class="nav">Nav</nav>
+      <article class="article">
+        <span class="article-header">Article</span>
+        <div class="article-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+          provident, aperiam fugit ex corrupti voluptas sapiente inventore quia
+          fuga error asperiores nemo quas vero minus repellendus eius modi cum
+          corporis!
+        </div>
+      </article>
+      <footer class="footer">Footer</footer>
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    background-color: rgb(30, 28, 26);
+    color: white;
+  }
+
+  .header,
+  .sidebar,
+  .nav,
+  .article,
+  .footer {
+    border-radius: 4px;
+    background-color: blue;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .article-header {
+    font-size: 15px;
+  }
+
+  .article-text {
+    font-size: 7px;
+  }
+
+  .container {
+    display: grid;
+    grid-template: 50px 50px 250px 50px / 100px 300px;
+    gap: 10px;
+    grid-template-areas:
+      "header header"
+      "sidebar nav"
+      "sidebar article"
+      "footer footer";
+  }
+
+  .header {
+    grid-area: header;
+    background-color: green;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: blue;
+  }
+
+  .nav {
+    grid-area: nav;
+    background-color: purple;
+  }
+
+  .article {
+    grid-area: article;
+    background-color: slateblue;
+  }
+
+  .footer {
+    grid-area: footer;
+    background-color: grey;
+  }
+</style>
