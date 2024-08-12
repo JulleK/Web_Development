@@ -2,3 +2,6 @@ node_modules
 CODE_YelpCamp
 .env
 YelpCamp/.gitignore
+
+# Generated files
+/target/
