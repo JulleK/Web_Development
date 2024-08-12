@@ -4,4 +4,4 @@ CODE_YelpCamp
 YelpCamp/.gitignore
 
 # Generated files
-/target/
+target/
