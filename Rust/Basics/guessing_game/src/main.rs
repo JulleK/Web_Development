@@ -1,6 +1,11 @@
+use rand::Rng;
 use std::io;
 
 fn main() {
+    let secret_number: i32 = rand::thread_rng().gen_range(1..=100);
+
+    // println!("the secret number is: {secret_number}");
+
     println!("Guess the number!");
     println!("Please input your guess:");
 
